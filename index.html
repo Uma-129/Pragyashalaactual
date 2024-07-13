@@ -7,203 +7,275 @@
    <title>Pragyashala</title>
    <style>
       /* Reset default browser styles */
-      * {
-         margin: 0;
-         padding: 0;
-         font-family: sans-serif;
-      }
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
 
-      /* Styles for header section */
-      .header {
-         width: 100%;
-         height: 100vh;
-         background-color: white;
-         background: url('main.jpg') no-repeat center center/cover;
-      }
+/* Styles for header section */
+.header {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    background: url('main.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-      /* Styles for navigation bar */
-      nav {
-         display: flex;
-         margin: auto;
-         width: 90%;
-         padding: 20px;
-         align-items: center;
-         justify-content: space-between;
-      }
+/* Styles for navigation bar */
+nav {
+    display: flex;
+    margin: auto;
+    width: 90%;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+}
 
-      nav ul {
-         display: flex;
-         flex-wrap: wrap;
-         gap: 10px;
-      }
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
 
-      nav ul li {
-         list-style: none;
-      }
+nav ul li {
+    margin: 0 5px;
+}
 
-      nav ul li a {
-         text-decoration: none;
-         color: black;
-         font-weight: bolder;
-      }
+nav ul li a {
+    color: white;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s;
+}
 
-      nav ul li a:hover {
-         background-color: rgb(5, 38, 68);
-         border-radius: 2px;
-         color: white;
-      }
+/* Default font size for navigation links */
+nav ul li a {
+    font-size: 17px;
+}
 
-      .button-cv, .button-gfc {
-         display: inline-block;
-         margin-left: 0%;
-         border-radius: 5px;
-         transition: background-color 0.5s;
-         background: black;
-         padding: 10px;
-         text-decoration: none;
-         font-weight: bold;
-         color: white;
-         border: none;
-         cursor: pointer;
-      }
+nav ul li a:hover {
+    background-color: rgb(5, 38, 68);
+    color: white;
+}
 
-      .button-cv:hover {
-         background-color: white;
-         color: rgb(242, 239, 239);
-      }
+.button-cv, .button-gfc {
+    display: inline-block;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
 
-      .button-gfc {
-         background: rgb(207, 30, 72);
-      }
+.button-cv {
+    background: black;
+}
 
-      .button-gfc:hover {
-         background-color: white;
-         color: rgb(244, 241, 241);
-      }
+.button-cv:hover {
+    background-color: white;
+    color: rgb(242, 239, 239);
+}
 
-      /* Styles for body section */
-      .body {
-         margin: 100px auto;
-         text-align: center;
-         padding: 0 20px;
-      }
+.button-gfc {
+    background: rgb(207, 30, 72);
+    margin-left: 10px;
+}
 
-      .body h1 {
-         font-size: 30px;
-         color: rgb(251, 247, 247);
-         margin-bottom: 20px;
-      }
+.button-gfc:hover {
+    background-color: rgb(26, 7, 74);
+    color: rgb(244, 241, 241);
+}
 
-      .demo1 {
-         color: goldenrod;
-         margin-bottom: 30px;
-      }
+/* Styles for body section */
+.body {
+    margin: 100px auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+}
 
-      .demo2 {
-         color: rgb(250, 248, 248);
-         line-height: 20px;
-      }
+.body h1 {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+}
 
-      .button-lrn, .button-hire {
-         background: rgb(207, 30, 72);
-         padding: 10px 12px;
-         text-decoration: none;
-         font-weight: bold;
-         color: whitesmoke;
-         display: inline-block;
-         margin: 30px 8px;
-         border-radius: 5px;
-         transition: background-color 0.3s;
-         border: none;
-         letter-spacing: 1px;
-         cursor: pointer;
-      }
+.demo1 {
+    color: goldenrod;
+    margin-bottom: 30px;
+}
 
-      .button-lrn:hover {
-         text-decoration: none;
-         background-color: whitesmoke;
-         color: black;
-      }
+.demo2 {
+    color: white;
+    line-height: 20px;
+}
 
-      .button-hire {
-         background: rgb(8, 0, 0);
-      }
+.button-lrn, .button-hire {
+    background: rgb(207, 30, 72);
+    padding: 10px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: whitesmoke;
+    display: inline-block;
+    margin: 30px 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border: none;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
 
-      .button-hire:hover {
-         background-color: rgb(249, 249, 249);
-      }
+.button-lrn:hover {
+    background-color: whitesmoke;
+    color: black;
+}
 
-      span {
-         color: rgb(211, 143, 181);
-      }
+.button-hire {
+    background: rgb(207, 30, 72);
+}
 
-      /* Styles for image section */
-      .image {
-         width: 100%;
-         max-width: 500px;
-         margin: 20px auto;
-         text-align: center;
-      }
+.button-hire:hover {
+    background-color: rgb(249, 249, 249);
+}
 
-      .image img {
-         width: 100%;
-         height: auto;
-         border-radius: 10px;
-      }
+span {
+    color: rgb(211, 143, 181);
+}
 
-      .logo {
-         border-radius: 50%;
-         border: 2px solid goldenrod;
-      }
+/* Styles for image section */
+.image {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+}
 
-      .linkedin {
-         background-color: #0077b5;
-      }
+.image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
 
-      .instagram {
-         background-color: #e4405f;
-      }
+.logo {
+    border-radius: 50%;
+    border: 2px solid goldenrod;
+    position:absolute;
+    left: 18px; /* Adjust as needed */
+    top:80px;
+}
 
-      .whatsapp {
-         background-color: #25d366;
-      }
+.linkedin {
+    background-color: #0077b5;
+}
 
-      .email {
-         background-color: #dd4b39;
-      }
+.instagram {
+    background-color: #e4405f;
+}
 
-      .social-button:hover {
-         opacity: 0.8;
-      }
+.whatsapp {
+    background-color: #25d366;
+}
 
-      .heading {
-         text-align: center;
-      }
+.email {
+    background-color: #dd4b39;
+}
 
-      footer {
-         text-align: center;
-         margin-top: 20px;
-      }
+.social-button:hover {
+    opacity: 0.8;
+}
 
-      @media (max-width: 768px) {
-         .header {
-            height: auto;
-            padding: 20px;
-         }
+.heading {
+    text-align: center;
+}
 
-         nav {
-            flex-direction: column;
-            align-items: flex-start;
-         }
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+}
 
-         nav ul {
-            flex-direction: column;
-         }
+/* Media Queries */
+@media (max-width: 1024px) {
+    nav ul li a {
+        font-size: 15px;
+    }
+    .button-cv, .button-gfc {
+        font-size: 15px;
+    }
+}
 
-         .body {
-            margin: 50px auto;
-         }
-      }
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .button-cv, .button-gfc {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .body {
+        margin: 50px auto;
+        padding: 20px;
+    }
+
+    .logo {
+        border-radius: 50%;
+        border:2px solid goldenrod;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .button-cv, .button-gfc {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .button-lrn, .button-hire {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .logo {
+        border-radius: 100%;
+        border: 2px solid goldenrod;
+
+    }
+}
+
+
    </style>
 </head>
 <body>
